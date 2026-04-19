@@ -328,39 +328,64 @@
 </footer>
 
 <script>
-  const SHEET_URL = 'https://script.google.com/macros/s/AKfycbxW1NYcHLOwvjHJyBTSJN42XbHCl5CrV36TXYCM0fu6ocXlulm4BFa0ZPdV2mN33qm3EQ/exec';
+  // Your NEW verified Web App URL
+  const SHEET_URL = 'https://script.google.com/macros/s/AKfycbxTferDu0ypd9NO06Pz7dD8i_iT_PR5sd6Hv8ZUBc-PyQoStEgYkD2pIn73bpXXvXHHkQ/exec';
 
   async function submitRSVP() {
+    // Get form values
     const name = document.getElementById('fname').value.trim();
     const phone = document.getElementById('phone').value.trim();
     const attendance = document.querySelector('input[name="attendance"]:checked');
     const guests = document.getElementById('guests').value;
     const message = document.getElementById('message').value.trim();
+    
     const btn = document.getElementById('submit-btn');
     const errMsg = document.getElementById('error-msg');
+    const rsvpForm = document.getElementById('rsvp-form');
+    const successMsg = document.getElementById('success');
 
+    // Basic Validation
     errMsg.style.display = 'none';
     if (!name) { alert('Please enter your name.'); return; }
     if (!attendance) { alert('Please select your attendance.'); return; }
 
+    // UI Feedback
     btn.disabled = true;
-    btn.textContent = 'Sending…';
+    btn.textContent = 'Sending...';
 
-    const payload = { name, phone, attendance: attendance.value, guests, message };
+    const payload = {
+      name: name,
+      phone: phone,
+      attendance: attendance.value,
+      guests: guests,
+      message: message
+    };
 
     try {
+      // Send data to Google Sheets
       await fetch(SHEET_URL, {
         method: 'POST',
-        mode: 'no-cors',
+        mode: 'no-cors', // Essential for Google Apps Script redirects
+        cache: 'no-cache',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
       });
-      document.getElementById('rsvp-form').style.display = 'none';
-      document.getElementById('success').style.display = 'block';
+
+      // Since 'no-cors' doesn't let us read the response, 
+      // we wait a brief moment and then show the success state.
+      setTimeout(() => {
+        rsvpForm.style.display = 'none';
+        successMsg.style.display = 'block';
+        // Scroll to success message
+        successMsg.scrollIntoView({ behavior: 'smooth' });
+      }, 500);
+
     } catch (err) {
+      console.error('RSVP Error:', err);
       btn.disabled = false;
       btn.textContent = 'Send My Response';
       errMsg.style.display = 'block';
+      errMsg.textContent = "Submission failed. Please check your internet and try again.";
     }
   }
 </script>
