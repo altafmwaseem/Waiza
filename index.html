@@ -214,153 +214,35 @@
     <p class="section-label">The Couple</p>
     <h2 class="section-title">Faiza &amp; Waseem</h2>
 
-    <div class="couple-illustration">
-      <!-- Full couple SVG illustration — faceless style, bride in gold lehenga + dupatta, groom in shalwar kameez + waistcoat -->
-      <svg width="380" height="440" viewBox="0 0 380 440" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;">
+    <div class="couple-illustration" style="background: white; border: 2px solid var(--gold-light); padding: 1.5rem;">
+      <svg width="340" height="400" viewBox="0 0 340 400" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
         <defs>
-          <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style="stop-color:#FAF6EE"/>
-            <stop offset="100%" style="stop-color:#F0E8D5"/>
+          <linearGradient id="gold-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#B8935A"/>
+            <stop offset="50%" style="stop-color:#D4AF7A"/>
+            <stop offset="100%" style="stop-color:#8B6A3A"/>
           </linearGradient>
-          <linearGradient id="bride-dress" x1="0%" y1="0%" x2="60%" y2="100%">
-            <stop offset="0%" style="stop-color:#C8A96E"/>
-            <stop offset="100%" style="stop-color:#A8803A"/>
-          </linearGradient>
-          <linearGradient id="groom-kameez" x1="0%" y1="0%" x2="40%" y2="100%">
-            <stop offset="0%" style="stop-color:#8B7355"/>
-            <stop offset="100%" style="stop-color:#6B5535"/>
-          </linearGradient>
-          <linearGradient id="waistcoat-grad" x1="0%" y1="0%" x2="30%" y2="100%">
-            <stop offset="0%" style="stop-color:#5C4020"/>
-            <stop offset="100%" style="stop-color:#3C2810"/>
-          </linearGradient>
-          <linearGradient id="skin" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" style="stop-color:#F5C896"/>
-            <stop offset="100%" style="stop-color:#E8A870"/>
-          </linearGradient>
-          <pattern id="embroidery" patternUnits="userSpaceOnUse" width="14" height="14">
-            <circle cx="7" cy="7" r="1.5" fill="#D4AF7A" opacity="0.35"/>
-            <path d="M7 2 L8.5 5.5 L12 7 L8.5 8.5 L7 12 L5.5 8.5 L2 7 L5.5 5.5Z" fill="#D4AF7A" opacity="0.2" transform="scale(0.5) translate(7,7)"/>
-          </pattern>
         </defs>
 
-        <!-- ══ GROOM (left) ══ -->
-        <!-- Legs / shalwar -->
-        <rect x="92" y="320" width="26" height="118" rx="8" fill="#7A6040"/>
-        <rect x="124" y="320" width="26" height="118" rx="8" fill="#7A6040"/>
-        <!-- Shoes -->
-        <ellipse cx="105" cy="436" rx="17" ry="7" fill="#3C2810"/>
-        <ellipse cx="137" cy="436" rx="17" ry="7" fill="#3C2810"/>
+        <g fill="none" stroke="url(#gold-grad)" stroke-width="1.5" opacity="0.8">
+          <path d="M170,20 Q210,20 230,40 M110,40 Q130,20 170,20" />
+          <path d="M170,380 Q210,380 230,360 M110,360 Q130,380 170,380" />
+          <circle cx="170" cy="20" r="3" fill="url(#gold-grad)"/>
+          <circle cx="170" cy="380" r="3" fill="url(#gold-grad)"/>
+          <path d="M140,30 Q155,10 170,30 Q185,10 200,30" opacity="0.5"/>
+          <path d="M140,370 Q155,390 170,370 Q185,390 200,370" opacity="0.5"/>
+        </g>
 
-        <!-- Kameez body -->
-        <path d="M74 175 Q68 210 66 260 Q65 300 70 330 L172 330 Q177 300 176 260 Q174 210 168 175 Q155 162 123 160 Q91 162 74 175Z" fill="url(#groom-kameez)"/>
-        <!-- Kameez embroidery overlay -->
-        <path d="M74 175 Q68 210 66 260 Q65 300 70 330 L172 330 Q177 300 176 260 Q174 210 168 175 Q155 162 123 160 Q91 162 74 175Z" fill="url(#embroidery)" opacity="0.6"/>
+        <g fill="#2C2318">
+          <path d="M135,120 Q135,100 145,85 Q155,70 145,55 Q135,45 120,45 Q105,45 95,55 Q85,70 95,85 Q105,100 105,120 L85,250 L145,250 Z" />
+          <path d="M205,120 Q205,100 215,85 Q225,70 215,55 Q205,45 190,45 Q175,45 165,55 Q155,70 165,85 Q175,100 175,120 L150,300 Q190,320 230,300 Z" />
+          <path d="M215,65 Q245,80 250,150 Q255,220 230,280" fill="none" stroke="#2C2318" stroke-width="2" opacity="0.6"/>
+        </g>
 
-        <!-- Waistcoat -->
-        <path d="M82 175 Q78 215 78 260 Q78 295 82 318 L108 318 L108 175 Q97 168 82 175Z" fill="url(#waistcoat-grad)"/>
-        <path d="M138 175 L138 318 L164 318 Q168 295 168 260 Q168 215 164 175 Q149 168 138 175Z" fill="url(#waistcoat-grad)"/>
-        <!-- Waistcoat gold trim -->
-        <path d="M108 175 L108 318" stroke="#B8935A" stroke-width="1.5" opacity="0.7"/>
-        <path d="M138 175 L138 318" stroke="#B8935A" stroke-width="1.5" opacity="0.7"/>
-        <!-- Waistcoat buttons -->
-        <circle cx="123" cy="200" r="3" fill="#D4AF7A" opacity="0.9"/>
-        <circle cx="123" cy="220" r="3" fill="#D4AF7A" opacity="0.9"/>
-        <circle cx="123" cy="240" r="3" fill="#D4AF7A" opacity="0.9"/>
-        <circle cx="123" cy="260" r="3" fill="#D4AF7A" opacity="0.9"/>
-        <!-- Waistcoat embroidery on edges -->
-        <path d="M82 178 Q80 195 80 215" stroke="#B8935A" stroke-width="0.8" fill="none" opacity="0.5" stroke-dasharray="3,3"/>
-        <path d="M164 178 Q166 195 166 215" stroke="#B8935A" stroke-width="0.8" fill="none" opacity="0.5" stroke-dasharray="3,3"/>
-
-        <!-- Collar / neckline -->
-        <path d="M108 175 Q116 168 123 170 Q130 168 138 175" stroke="#C8A96E" stroke-width="2" fill="none"/>
-
-        <!-- Arms -->
-        <path d="M74 180 Q55 210 52 250 Q52 265 60 268 Q68 270 72 258 Q74 240 82 215Z" fill="url(#groom-kameez)"/>
-        <path d="M168 180 Q187 210 190 250 Q190 265 182 268 Q174 270 170 258 Q168 240 160 215Z" fill="url(#groom-kameez)"/>
-        <!-- Hands -->
-        <ellipse cx="58" cy="272" rx="12" ry="9" fill="url(#skin)"/>
-        <ellipse cx="184" cy="272" rx="12" ry="9" fill="url(#skin)"/>
-
-        <!-- Neck -->
-        <rect x="111" y="148" width="24" height="18" rx="6" fill="url(#skin)"/>
-
-        <!-- Head (faceless) -->
-        <ellipse cx="123" cy="118" rx="38" ry="42" fill="url(#skin)"/>
-        <!-- Hair - short dark male hair -->
-        <path d="M85 108 Q87 70 123 68 Q159 70 161 108 Q155 82 123 80 Q91 82 85 108Z" fill="#1A0E06"/>
-        <path d="M85 108 Q83 120 86 130" fill="#1A0E06" opacity="0.4"/>
-        <path d="M161 108 Q163 120 160 130" fill="#1A0E06" opacity="0.4"/>
-        <!-- Beard -->
-        <path d="M88 128 Q90 148 123 154 Q156 148 158 128 Q148 144 123 146 Q98 144 88 128Z" fill="#1A0E06" opacity="0.75"/>
-        <path d="M88 115 Q86 128 88 138" stroke="#1A0E06" stroke-width="3" fill="none" opacity="0.4"/>
-        <path d="M158 115 Q160 128 158 138" stroke="#1A0E06" stroke-width="3" fill="none" opacity="0.4"/>
-        <!-- Moustache -->
-        <path d="M108 124 Q116 121 123 122 Q130 121 138 124" stroke="#1A0E06" stroke-width="2.5" fill="none" opacity="0.8"/>
-
-        <!-- ══ BRIDE (right) ══ -->
-        <!-- Lehenga / skirt — wide flare -->
-        <path d="M218 265 Q200 310 188 380 Q185 420 190 440 L340 440 Q345 420 342 380 Q330 310 312 265Z" fill="url(#bride-dress)"/>
-        <!-- Lehenga embroidery -->
-        <path d="M218 265 Q200 310 188 380 Q185 420 190 440 L340 440 Q345 420 342 380 Q330 310 312 265Z" fill="url(#embroidery)" opacity="0.8"/>
-        <!-- Lehenga bottom hem gold border -->
-        <path d="M188 440 L340 440" stroke="#D4AF7A" stroke-width="3" opacity="0.8"/>
-        <path d="M190 432 Q265 428 340 432" stroke="#D4AF7A" stroke-width="1.5" fill="none" opacity="0.5"/>
-
-        <!-- Blouse / choli body -->
-        <path d="M210 190 Q205 225 205 265 L315 265 Q315 225 310 190 Q295 175 265 173 Q235 175 210 190Z" fill="url(#bride-dress)"/>
-        <path d="M210 190 Q205 225 205 265 L315 265 Q315 225 310 190 Q295 175 265 173 Q235 175 210 190Z" fill="url(#embroidery)" opacity="0.9"/>
-
-        <!-- Dupatta draping over left shoulder and flowing right -->
-        <path d="M205 185 Q180 200 175 240 Q172 270 178 310 Q182 330 188 350" stroke="#B8935A" stroke-width="28" stroke-linecap="round" fill="none" opacity="0.5"/>
-        <!-- Dupatta on head -->
-        <path d="M232 88 Q248 72 265 70 Q295 70 318 88 Q300 75 265 76 Q232 76 232 88Z" fill="#B8935A" opacity="0.65"/>
-        <!-- Dupatta wrap around head flowing down right -->
-        <path d="M318 88 Q340 110 338 145 Q336 170 325 185" stroke="#B8935A" stroke-width="20" stroke-linecap="round" fill="none" opacity="0.45"/>
-
-        <!-- Arms -->
-        <path d="M210 195 Q192 225 188 262 Q188 275 196 277 Q204 278 208 266 Q212 248 218 222Z" fill="url(#bride-dress)"/>
-        <path d="M310 195 Q328 220 332 255 Q333 268 326 270 Q318 272 314 260 Q310 242 305 218Z" fill="url(#bride-dress)"/>
-        <!-- Hands with mehndi hint -->
-        <ellipse cx="192" cy="281" rx="11" ry="8" fill="url(#skin)"/>
-        <ellipse cx="328" cy="274" rx="11" ry="8" fill="url(#skin)"/>
-        <!-- Mehndi pattern hint on hands -->
-        <path d="M186 279 Q192 276 198 279" stroke="#8B4513" stroke-width="0.8" fill="none" opacity="0.5"/>
-
-        <!-- Neck -->
-        <rect x="253" y="158" width="24" height="18" rx="6" fill="url(#skin)"/>
-
-        <!-- Necklace -->
-        <path d="M238 183 Q265 196 292 183" stroke="#D4AF7A" stroke-width="2" fill="none" opacity="0.8"/>
-        <circle cx="265" cy="193" r="4" fill="#D4AF7A" opacity="0.9"/>
-        <circle cx="250" cy="188" r="2.5" fill="#D4AF7A" opacity="0.7"/>
-        <circle cx="280" cy="188" r="2.5" fill="#D4AF7A" opacity="0.7"/>
-        <!-- Earrings -->
-        <line x1="232" y1="128" x2="232" y2="145" stroke="#D4AF7A" stroke-width="1.5" opacity="0.8"/>
-        <circle cx="232" cy="148" r="4" fill="#D4AF7A" opacity="0.8"/>
-        <line x1="298" y1="128" x2="298" y2="145" stroke="#D4AF7A" stroke-width="1.5" opacity="0.8"/>
-        <circle cx="298" cy="148" r="4" fill="#D4AF7A" opacity="0.8"/>
-        <!-- Maang tikka -->
-        <line x1="265" y1="78" x2="265" y2="96" stroke="#D4AF7A" stroke-width="1.5" opacity="0.8"/>
-        <circle cx="265" cy="98" r="5" fill="#D4AF7A" opacity="0.85"/>
-
-        <!-- Head (faceless) -->
-        <ellipse cx="265" cy="110" rx="36" ry="40" fill="url(#skin)"/>
-        <!-- Long wavy hair -->
-        <path d="M230 100 Q226 68 265 65 Q304 68 300 100 Q296 75 265 74 Q234 75 230 100Z" fill="#1A0E06"/>
-        <path d="M230 100 Q224 125 226 155 Q228 175 232 185" fill="#1A0E06" opacity="0.85"/>
-        <path d="M300 100 Q306 128 305 158 Q303 178 298 185" fill="#1A0E06" opacity="0.85"/>
-        <!-- Hair wave detail -->
-        <path d="M226 140 Q222 155 226 168" stroke="#2A1A0A" stroke-width="1.5" fill="none" opacity="0.3"/>
-        <path d="M304 140 Q308 155 304 168" stroke="#2A1A0A" stroke-width="1.5" fill="none" opacity="0.3"/>
-
-        <!-- Gold dividing ornament between couple -->
-        <line x1="192" y1="200" x2="192" y2="380" stroke="#D4AF7A" stroke-width="0.8" opacity="0.4" stroke-dasharray="4,6"/>
-        <circle cx="192" cy="290" r="4" fill="#B8935A" opacity="0.5"/>
-        <path d="M188 290 L196 290 M192 286 L192 294" stroke="#B8935A" stroke-width="1" opacity="0.4"/>
+        <path d="M110,130 L230,130" stroke="url(#gold-grad)" stroke-width="0.5" stroke-dasharray="4,4"/>
+        <text x="170" y="340" text-anchor="middle" font-family="'Cinzel', serif" font-size="14" fill="url(#gold-grad)" letter-spacing="3">NIKAH</text>
       </svg>
-
-      <p class="couple-names-label">Faiza &amp; Waseem</p>
+      <p class="couple-names-label" style="font-weight: 600; color: var(--gold-dark);">Faiza & Waseem</p>
     </div>
   </div>
 </section>
